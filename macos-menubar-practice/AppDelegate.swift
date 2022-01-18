@@ -21,13 +21,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     NSToolbar.myToolbar.delegate = self
         
     // Create the window and set the content view.
-    window = NSWindow(
+    window = SampleWindow(
         contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
         styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
         backing: .buffered, defer: false)
-    
-    window.toolbar = .myToolbar
-    window.titleVisibility = .hidden
     
     window.isReleasedWhenClosed = false
     window.center()
